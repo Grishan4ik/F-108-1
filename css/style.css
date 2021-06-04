@@ -75,6 +75,7 @@
     display: block;
     margin-top: 19px;
     margin-bottom: 20px;
+    max-width: 75%;
 }
 
 
@@ -135,8 +136,12 @@
 
 .map-wrapper {
     background: #008752;
-    display: flex;
-    flex-direction: column;
+    -webkit-display: flex;
+        -moz-display: flex;
+            display: flex;
+    -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+                flex-direction: column;
     width: 380px;
     position: absolute;
     top: 40px;
@@ -159,10 +164,45 @@
 .map-phone {
     color: #fff;
     margin-bottom: 23px;
+    font-weight: 700;
 }
 
 /* POPUP */
 
 .modal-popup {
     display: none;
+    background: rgba(149, 69, 154, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
+
+.modal-popup.popup-open {
+    display: block;
+}
+
+.close {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.popup-form {
+    width: 680px;
+    background: #EEEEEE;
+    position: absolute;
+    top: 270px;
+    left: 367px;
+    padding: 50px;
+}
+
+.popup-form .button {
+    margin-top: 20px;
+}
+
+
